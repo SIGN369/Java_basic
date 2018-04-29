@@ -2,6 +2,7 @@
     <wb-module deploy-name="Java_basic_2018_02_11">
         <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/cfg"/>
         <property name="context-root" value="Java_basic_2018_02_11"/>
         <property name="java-output-path" value="/Java_basic_2018_02_11/build/classes"/>
     </wb-module>

@@ -9,7 +9,7 @@ package com.tree.multithread.basic;
  */
 public class SellTicket implements Runnable{
  //100��Ʊ,�����ڳ�Ա������ÿ�ζ������ֻ����һ��ֵ��ͨ�����߳����߲��ܿ�������
-	private int ticket = 100;
+	public int ticket = 100;
 	/**
 	 * ��Ʊ����
 	 */
