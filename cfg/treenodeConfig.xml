@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	说明：
+	node：树结构分类节点
+	id:父节点id，不能重复
+	parentName:父节点名称
+	childIds:子节点id集合
+	暂未做健壮性开发，请按示例配置
+	eg:
+	<nodes>
+	<node id="1001">
+		<parentName>重要情况的爸爸</parentName>
+		<childIds>7846310514224683316,9177673537584265713</childIds>
+	</node>
+	<node id="1002">
+		<parentName>领导批示的爸爸</parentName>
+		<childIds>6408378300957184457,6219164034329456962</childIds>
+	</node>
+</nodes>
+ -->
+<nodes>
+	<node id="1001">
+		<parentName>重要情况的爸爸</parentName>
+		<childIds>7846310514224683316,9177673537584265713</childIds>
+	</node>
+	<node id="1002">
+		<parentName>领导批示的爸爸</parentName>
+		<childIds>6408378300957184457,6219164034329456962</childIds>
+	</node>
+	<node id="1003">
+		<parentName>区县上报和测试数据</parentName>
+		<childIds>5017395329836403565,8527582361379623206</childIds>
+	</node>
+	<node id="1004">
+		<parentName>区县上报和测试数据kjjkkjkjkjkkj</parentName>
+		<childIds>50173953236403565,8527582361379623206,89090890</childIds>
+	</node>
+</nodes>

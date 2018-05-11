@@ -19,7 +19,6 @@ public class SortUtils {
 					int tmp=arr[i-1];
 					arr[i-1] = arr[index];
 					arr[index] = tmp;
-					System.out.println(Arrays.toString(arr));
 				}	
 			  for(int m =i;m<arr.length;m++){
 				if(arr[m]<min){//���С����Сֵ����Сֵת��
