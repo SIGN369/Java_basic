@@ -9,7 +9,9 @@ public class ValueDelivery {
 	
 	public void changeValue(int v,ValueDelivery vo) {
 		ValueDelivery vd = new ValueDelivery();
-		vd.v = v;
+		vd.v = 88;
+		vo.v = v;
+		//In here change the pointer to another object that not affect original object.
 		vo = vd;
 	}
 	/**
@@ -19,7 +21,8 @@ public class ValueDelivery {
 	public static void main(String[] args) {
 		ValueDelivery vo = new ValueDelivery();
 		System.out.println(vo.v);
-		vo.changeValue(25,vo);
+		
+		vo.changeValue(25,vo);//'vo' in here  just a copy point to original vo.
 		System.out.println(vo.v);
 	}
 }
