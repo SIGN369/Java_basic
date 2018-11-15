@@ -9,10 +9,12 @@ public class ValueDelivery {
 	
 	public void changeValue(int v,ValueDelivery vo) {
 		ValueDelivery vd = new ValueDelivery();
+		System.out.println(vo==this);//Two variables share a object in heap.
 		vd.v = 88;
 		vo.v = v;
 		//In here change the pointer to another object that not affect original object.
 		vo = vd;
+		vo.v = 66;
 	}
 	/**
 	 * Just a copy of args;
@@ -21,7 +23,7 @@ public class ValueDelivery {
 	public static void main(String[] args) {
 		ValueDelivery vo = new ValueDelivery();
 		System.out.println(vo.v);
-		
+		//Actually only exist one object in heap but two variables in stack they all point to the same object.
 		vo.changeValue(25,vo);//'vo' in here  just a copy point to original vo.
 		System.out.println(vo.v);
 	}
