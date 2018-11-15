@@ -4,14 +4,10 @@ import org.junit.Test;
 
 
 public class Invoker {
-	/**
-	 * ��̬����ʵ��
-	 */
 	@Test
 		public void findHouse() {
 			DynamicProxy dynamicProxy = new DynamicProxy();
-			ProxyManage proxy = dynamicProxy.getProxy();//��ȡ�������Ŀ������е�������
-			//ֱ�ӵ���Ŀ����󷽷�
+			ProxyManage proxy = dynamicProxy.getProxy();
 			String rent = proxy.rent();
 			System.out.println(rent);
 		}

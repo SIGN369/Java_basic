@@ -13,7 +13,6 @@ public class DemoTest {
 		Thread tin = new Thread(in);
 		Thread tout = new Thread(out);
 		
-		//�����߳�
 		tin.start();
 		tout.start();
 		

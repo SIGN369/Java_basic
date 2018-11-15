@@ -1,7 +1,5 @@
 package com.tree.multithread.waitnotify;
 /**
- * ��������
- * ��һ���߳�����������һ���߳����������
  * @author zyg
  *
  */
@@ -11,17 +9,9 @@ public class Input implements Runnable{
 	public Input(Person p) {
 		this.p = p;
 	}
-	/**
-	 * ʹ�õȴ����ѻ���
-	 */
 	@Override
 	public void run() {
-		/**
-		 * �����ʱ��Ҫ�ȴ�
-		 * ע��ʹ��ͳһ����
-		 */
 		int a =0;
-		//��person���Ը�ֵ
 		while (true) {
 			synchronized (p) {
 				if (p.flag) {

@@ -4,31 +4,13 @@ import java.io.UnsupportedEncodingException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**���ģ����еķ��Ŷ�������-�˽��� ���ӳ�䣬ת���ľ�ok��byte<char<int
- * �ַ��������ȫ
- * 1���ַ����ı�������ȡÿһ���ַ���
- * 2���ַ���ת��Ϊ�ֽ����飬�ú��������ַ����Ĺ��췽���ع��ַ�����Ӧ����IO��
- * 3���ַ���ת��Ϊ�ַ����飬str.toCharArray();����ͳ��ÿһ���ַ�������
- * 4���ж��ַ����Ƿ�������ֻ����ǲ����ַ�������
- * 5���ж��Ƿ�Ϊ��
- * 6���ı��ַ����ı���
- * @author zyg
- *
- */
 public class StringUtils {
-	/**
-	 * 1���ַ����ı�������ȡÿһ���ַ���
-	 * @param str
-	 */
    public static void traversal(String str) {
 	   char[] charArray = str.toCharArray();
 	   for (char c : charArray) {
 		System.out.println(c);
 	}
    }
-   /**
-    * ͳ���ַ���
-    */
    public static String stastistic(String string) {
 	   char[] charArray = string.toCharArray();
 	   int blank = 0;
@@ -47,11 +29,8 @@ public class StringUtils {
 			others++;
 		}
 	   }
-	return "��ĸ��"+letter+"��"+"���֣�"+numeric+"��"+"�ո�"+blank+"��"+"������"+others+"��";
+	return "Alpah:"+letter+"-"+"Numbers:"+numeric+"-"+"blanks:"+blank+"-"+"others:"+others+"-";
    }
-   /**
-    * �ַ������뷽ʽ��ת��
-    */
    public static String changeCharset(String strs) {
 	   try {
 		return new String(strs.getBytes(), "utf-8");
@@ -60,19 +39,16 @@ public class StringUtils {
 	}
 	return null;
    }
-// �ж�һ���ַ����Ƿ�Ϊ����    
 public boolean isDigits(String strNum) {    
     return strNum.matches("[0-9]{1,}");    
 }    
     
-// �ж�һ���ַ����Ƿ�Ϊ����    
 public boolean isDigit(String strNum) {    
     Pattern pattern = Pattern.compile("[0-9]{1,}");    
     Matcher matcher = pattern.matcher((CharSequence) strNum);    
     return matcher.matches();    
 }  
   
-//��ȡ����    
 public String getNumbers(String content) {    
     Pattern pattern = Pattern.compile("\\d+");    
     Matcher matcher = pattern.matcher(content);    
@@ -82,7 +58,6 @@ public String getNumbers(String content) {
     return "";    
 }    
     
-// ��ȡ������    
 public String splitNotNumber(String content) {    
     Pattern pattern = Pattern.compile("\\D+");    
     Matcher matcher = pattern.matcher(content);    

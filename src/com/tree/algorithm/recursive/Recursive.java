@@ -2,14 +2,10 @@ package com.tree.algorithm.recursive;
 
 public class Recursive {
 	 /**
-	  * factorial���׳�
-	  * �ݹ飺���ٹ���ջ������
-	  * 1.�ݹ�ǰ��--�߽���
-	  * 2.�ݹ鷵��--���߽�ʱ
-	  * @param i
-	  * @return
-	  * ԭ��
-	  * 	f(5) = 5*f(4); = 5*4*3*2*1//ÿ�ζ���������ڹ���ջ�е���߽��ݹ�Ż�
+	  * factorial���--recursice consist of two part 
+	  * 		1、forward
+	  * 		2、backward
+	  * 	f(5) = 5*f(4); = 5*4*3*2*1
 	  * 	f(4) = 4*f(3); = 4*3*2*1
 	  * 	f(3) = 3*f(2); = 3*2*1
 	  * 	f(2) = 2*f(1); = 2*1
@@ -29,4 +25,12 @@ public class Recursive {
 		 int factorial = Recursive.factorial(5);
 		 System.out.println(factorial);
 	}
+	 
+	 /**
+	  * Create user menu tree via recursive.
+	  * @return
+	  */
+	 public String generateUserMenuTree() {
+		 return "";
+	 }
 }

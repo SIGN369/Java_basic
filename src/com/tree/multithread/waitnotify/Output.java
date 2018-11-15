@@ -2,7 +2,6 @@ package com.tree.multithread.waitnotify;
 
 public class Output implements Runnable{
 	private Person p;
-	//��������ֵ
 	public Output(Person p) {
 		this.p = p;
 	}
@@ -10,7 +9,7 @@ public class Output implements Runnable{
 	public void run() {
 		synchronized (p) {
 			while (true) {
-			if (!p.flag) {//��δ ��ֵʱflagΪfalseʱ��Ҫ�ȴ�
+			if (!p.flag) {
 				try {
 					p.wait();
 				} catch (InterruptedException e) {
