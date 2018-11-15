@@ -2,7 +2,7 @@
 java基础、一些demo
 JaveSE --基础
 
- ![image](https://github.com/iRobotT/Java_basic/master/graph/JaveEE.jpg)
+ ![image](https://github.com/iRobotT/Java_basic/graph/JaveEE.jpg)
  
 JaveEE--企业级别应用
 
