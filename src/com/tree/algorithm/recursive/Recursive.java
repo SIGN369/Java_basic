@@ -25,4 +25,8 @@ public class Recursive {
 	 		sum = i * factorial(i-1);
 	 	return sum;
 	 }
+	 public static void main(String[] args) {
+		 int factorial = Recursive.factorial(5);
+		 System.out.println(factorial);
+	}
 }
