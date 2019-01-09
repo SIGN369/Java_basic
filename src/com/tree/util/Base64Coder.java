@@ -1,10 +1,6 @@
 package com.tree.util;
 
 import java.io.UnsupportedEncodingException;
-import org.apache.commons.codec.binary.Base64;
-import org.bouncycastle.util.encoders.UrlBase64;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 /**
  * Base64算法主要用于电子邮件传输、密钥和证书文件的文本方式保存， 在数据保密要求不高的情况下，可以做简单的数据“加密”

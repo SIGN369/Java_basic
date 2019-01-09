@@ -102,7 +102,7 @@ public class EnumConstantsDemo {
         private String text;
         
         public String getText() {
-            return ResourceUtil.getString(text);
+            return this.text;
         }
         private TaskRoleType(int key,String text) {
             this.key = key;
@@ -130,7 +130,7 @@ public class EnumConstantsDemo {
                     return type;
                 }
             }
-            throw new IllegalArgumentException(ResourceUtil.getString("taskmanage.label.undefinedRoleType") + "[key=" + key + "]");
+            throw new IllegalArgumentException("[key=" + key + "]");
         }
     }
 	
@@ -201,7 +201,7 @@ public class EnumConstantsDemo {
                     return type;
                 }
             }
-            throw new IllegalArgumentException(ResourceUtil.getString("taskmanage.label.wrongfulness",key));
+            throw new IllegalArgumentException("taskmanage.label.wrongfulness");
         }
     }
     
@@ -241,7 +241,7 @@ public class EnumConstantsDemo {
         }
         @Override
         public String getText() {
-            return ResourceUtil.getString(text);
+            return this.text;
         }
         @Override
         public String getValue() {
@@ -260,73 +260,7 @@ public class EnumConstantsDemo {
             }
             return statusEnum;
         }
-        /**
-         * <description>转换为statusEnums对应key集合</description>
-         *
-         * @return
-         * @author: ouyp
-         * @since: Seeyon v6.1
-         * @date: 2016年12月10日 下午7:36:03
-         */
-        public List<Integer> getStatusEnumsKeys() {
-            List<Integer> keys = null;
-            switch (this) {
-                case all:
-                    keys = Arrays.asList(TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey(),TaskStatus.finished.getKey(), TaskStatus.canceled.getKey());
-                    break;
-                case unfinished:
-                    keys = Arrays.asList(TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey());
-                    break;
-                case marching:
-                    keys = Arrays.asList(TaskStatus.marching.getKey());
-                    break;
-                case notstarted:
-                    keys = Arrays.asList(TaskStatus.notstarted.getKey());
-                    break;
-                case overdue:
-                    keys = Arrays.asList(TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey());
-                    break;
-                case finished:
-                    keys = Arrays.asList(TaskStatus.finished.getKey());
-                    break;
-                case canceled:
-                    keys = Arrays.asList(TaskStatus.canceled.getKey());
-                    break;
-                default:
-                    throw new IllegalArgumentException(ResourceUtil.getString("taskmanage.label.invalidParam"));
-            }
-            return keys;
-        }
-        public Integer[] getStatusKeys(){
-        	Integer[] keys = null;
-            switch (this) {
-                case all:
-                    keys = new Integer[]{TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey(),TaskStatus.finished.getKey(), TaskStatus.canceled.getKey()};
-                    break;
-                case unfinished:
-                    keys = new Integer[]{TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey()};
-                    break;
-                case marching:
-                    keys = new Integer[]{TaskStatus.marching.getKey()};
-                    break;
-                case notstarted:
-                    keys = new Integer[]{TaskStatus.notstarted.getKey()};
-                    break;
-                case overdue:
-                    keys = new Integer[]{TaskStatus.notstarted.getKey(), TaskStatus.marching.getKey()};
-                    break;
-                case finished:
-                    keys = new Integer[]{TaskStatus.finished.getKey()};
-                    break;
-                case canceled:
-                    keys = new Integer[]{TaskStatus.canceled.getKey()};
-                    break;
-                default:
-                    throw new IllegalArgumentException(ResourceUtil.getString("taskmanage.label.invalidParam"));
-            }
-            return keys;
-        }
-    }
+      
     
     /** rest list all task */
     public final static String REST_ALL = "all";
@@ -397,19 +331,19 @@ public class EnumConstantsDemo {
 		}
 		@Override
 		public String getText() {
-			return ResourceUtil.getString(this.text);
+			return this.text;
 		}
 		public String getAuditText() {
 			String label = "";
 			switch (this) {
 				case Auditing:
-					label = ResourceUtil.getString(this.text);
+					label = this.text;
 					break;
 				case Pass:
-					label = ResourceUtil.getString("taskmanage.TaskAuditStatus.AuditPass.js");
+					label = "";
 					break;
 				case NotPass:
-					label = ResourceUtil.getString("taskmanage.TaskAuditStatus.AuditNotPass.js");
+					label = "";
 					break;
 				default:
 					break;
@@ -457,7 +391,7 @@ public class EnumConstantsDemo {
 		}
 		@Override
 		public String getText() {
-			return ResourceUtil.getString(this.text);
+			return this.text;
 		}
 		public int getKey() {
 			return key;
@@ -520,5 +454,5 @@ public class EnumConstantsDemo {
 			return String.valueOf(fliterKey);
 		}
     }
-    
+    } 
 }
