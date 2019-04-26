@@ -25,5 +25,11 @@ public abstract class Abstract {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+	/**
+	 * Specific method in abstract class.
+	 * @return
+	 */
+	public String saySB() {
+		return "Hi,SB";
+	}
 }
