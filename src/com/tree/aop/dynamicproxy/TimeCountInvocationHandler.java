@@ -18,7 +18,7 @@ public class TimeCountInvocationHandler implements InvocationHandler {
     }
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-		if(method.getName().equals("run")) {
+		if(method.getName().equals("run")) {//可以写入判断注解的处理逻辑
 			System.out.println("这个方法不用代理，因为没有打注解");
 		}
 		 long start = System.currentTimeMillis();

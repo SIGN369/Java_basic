@@ -2,6 +2,7 @@ package com.tree.generic;
 /**
  * About value delivery in java;
  * @author zyg
+ * Java中所有的参数传递方式都是值传递，传递的实际上是一份副本
  *
  */
 public class ValueDelivery {

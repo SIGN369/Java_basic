@@ -22,7 +22,7 @@ public class AnnotatioTest {
 	
 	public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		//现在用户角色时开发，但是目标方法上的注解值时root，不是root时无法访问目标方法的
-		 String role = "root";
+		 String role = "admin";
 		 //获取目标实例
 		Class<?> clazz = Class.forName("com.tree.annotation.HostManager");
 		//获取所有方法
