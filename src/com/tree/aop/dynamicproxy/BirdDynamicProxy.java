@@ -9,7 +9,7 @@ import com.tree.aop.common.MockBird;
 /**
  * 模拟生成代理类
  * @author zyg
- * 接口好处--方便代理
+ * 接口好处--方便代理，就是生成了一个加强版的类，而且还是同一个接口体系下的，可以直接替换
  *
  */
 public class BirdDynamicProxy implements Flyable {
